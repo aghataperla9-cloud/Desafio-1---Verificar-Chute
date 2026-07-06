@@ -1,0 +1,44 @@
+ // 1. IMC
+function imc(peso, altura) {
+  return peso / (altura * altura);
+}
+console.log(imc(39, 1.48));
+
+// 2. Fatorial
+function fatorial(n) {
+  let fat = 1;
+  for (let i = 1; i <= n; i++) {
+    fat *= i;
+  }
+  return fat;
+}
+console.log(fatorial(5));
+
+// 3. Dólar para Real
+function converter(dolar) {
+  return dolar * 4.80;
+}
+console.log(converter(10));
+
+// 4. Área e perímetro do retângulo
+function retangulo(largura, altura) {
+  console.log("Área:", largura * altura);
+  console.log("Perímetro:", 2 * (largura + altura));
+}
+retangulo(5, 3);
+
+// 5. Área e perímetro do círculo
+function circulo(raio) {
+  const pi = 3.14;
+  console.log("Área:", pi * raio * raio);
+  console.log("Perímetro:", 2 * pi * raio);
+}
+circulo(4);
+
+// 6. Tabuada
+function tabuada(numero) {
+  for (let i = 1; i <= 10; i++) {
+    console.log(`${numero} x ${i} = ${numero * i}`);
+  }
+}
+tabuada(7);
