@@ -1,0 +1,105 @@
+/ IF/ELSE
+
+// definir um fluxo para somar ou multiplicar dois números usando if e else
+const num1 = 2;
+const num2 = 4;
+const operaçao = 'divisão';
+
+if (operaçao === 'soma') {
+    console.log(num1 + num2);
+} else if (operaçao === 'multiplicação') {
+    console.log(num1 * num2);
+} else if (operaçao === 'divisão') {
+    console.log(num1 / num2);
+} else {
+    console.log('operação inválida');
+}
+
+// localizar o nivel de bônus de acordo com a faixa salarial 
+// ex: $11000 e acima: 3% de bônus 
+// $10999 a $7000: 5% de bônus 
+// $ 6999 a $4008: 7% de bônus 
+// $3999 p baixo: 9% de bônus 
+
+const salario = 2000;
+
+if (salario >= 11000) {
+    console.log('3% de bônus');
+} else if (salario < 11000 && salario >= 7000) {
+    console.log('5% de bônus');
+} else if (salario < 7000 && salario >= 4000) {
+    console.log('7% de bônus');
+} else {
+    console.log('9% de bônus');
+}
+
+// deve ser divisível por 4 mas NÃO divisível por 100
+// OU
+// deve ser divisível por 100 e por 400
+const ano = 2024;
+// const ano = 2000;
+// const ano = 2022;
+// const ano = 1992;
+if (((ano % 4 === 0) && (ano % 100 !== 0)) || (ano % 400 === 0)) {
+    console.log('O ano é bissexto');
+} else {
+    console.log('O ano não é bissexto');
+}
+
+// switch
+switch (avaliacao) {
+    case 5:
+        console.log('avaliação ótima');
+        break;
+    case 4:
+        console.log('avaliação boa');
+        break;
+    case 3:
+        console.log('avaliação neutra');
+        break;
+    default:
+        console.log('avaliação baixa');
+        break;
+}
+// Operador ternário
+const nome = "Fernando";
+let saudacao;
+
+if (nome) {
+    saudacao = `olá, ${nome}`;
+} else {
+    saudacao = 'olá, pessoa';
+}
+// Verificar se estudante receberá bônus na nota.
+// Estudantes recebem bônus se nota for 8 ou acima e se tiverem no máximo 2 faltas.
+const nome = "Roberta";
+const nota = 8;
+const faltas = 2;
+
+const  recebeBonus = (nota >= 8) && (faltas <= 2);
+    ?`${nome} recebe bônus`;
+    :`${nome} não recebe bônus`;
+
+console.log(recebeBonus);
+
+// criar um fluxo que identifica o tipo de pessoa usuária e comunica de acordo.
+// ex: pessoa usuária free tem acesso limitado ao app
+//     pessoa usuária premium tem acesso a todas as funções
+//     pessoa usuária super premium tem acesso total e bônus especiais
+
+const user = 'free';
+
+switch (user) {
+    case 'super premium':
+        console.log('acesso limitado');
+        break;
+    case 'premium':
+        console.log('acesso total ao app');
+        break;
+    case 'super premium':
+        console.log('acesso total ao app e bônus especiais');
+        break;
+    default:
+        console.log('tipo de usuário não reconhecido');
+        break;
+}
