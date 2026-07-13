@@ -1,0 +1,57 @@
+// Verificar se estudante receberá bônus na nota.
+// Estudantes recebem bônus se nota for 8 ou acima e se tiverem no máximo 2 faltas.
+const nome = "Roberta";
+const nota = 8;
+const faltas = 2;
+
+const  recebeBonus = (nota >= 8) && (faltas <= 2);
+    ?`${nome} recebe bônus`;
+    :`${nome} não recebe bônus`;
+
+console.log(recebeBonus);
+// criar um fluxo que identifica o tipo de pessoa usuária e comunica de acordo.
+// ex: pessoa usuária free tem acesso limitado ao app
+//     pessoa usuária premium tem acesso a todas as funções
+//     pessoa usuária super premium tem acesso total e bônus especiais
+const user = 'free';
+switch (user) {
+    case 'super premium':
+        console.log('acesso limitado');
+        break;
+    case 'premium':
+        console.log('acesso total ao app');
+        break;
+    case 'super premium':
+        console.log('acesso total ao app e bônus especiais');
+        break;
+    default:
+        console.log('tipo de usuário não reconhecido');
+        break;
+}
+//temperatura
+const temperatura = 23;
+if (temperatura < 15) {
+  console.log("Frio");
+} else if (temperatura >= 15 && temperatura <= 25) {
+  console.log("Agradável");
+} else {
+  console.log("Quente");
+}
+//faixa etária
+const idade = 15;
+ 
+if (idade < 12) {
+  console.log("Infantil");
+} else if (idade >= 12 && idade < 18) {
+  console.log("Juvenil");
+} else {
+  console.log("Adulto");
+}
+// dia da semana
+const diaSemana = 6;
+ 
+if (diaSemana === 6 || diaSemana === 0) {
+  console.log("A loja está aberta em horário especial: 10h às 14h.");
+} else {
+  console.log("A loja está aberta no horário normal: 9h às 18h.");
+}
