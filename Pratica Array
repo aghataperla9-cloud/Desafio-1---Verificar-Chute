@@ -19,3 +19,32 @@ function criarArrNum(inicio, fim) {
     return arr
 }
 console.log(criarArrNum(456,560));
+// MÉTODOS
+// clonar array multidimensional com "deep copy". E por que não podemos clonar via variável?
+const arr1 = [[1, 2], 2, 3];
+
+const copiaArray = (arr) => {
+    const copia = [];
+    arr.forEach((elem) => {
+        if (Array.isArray(elem)) {
+            copia.push(copiaArray(elem));
+        } else {
+            copia.push(elem);
+        }
+    })
+    return copia;
+}
+
+const arr2 = copiaArray(arr1);
+arr1[0][0] = 5;
+
+console.log(arr1);
+console.log(arr2);
+
+// Filtrar um array e alterar valores específicos.
+// ex: alterar numeros para strings.
+const cpfs = ['12323434545', '34658756786'];
+
+const result = cpfs.map(cpf => typeof cpf === 'string' ? cpf : cpf.toString())
+
+console.log(result);
