@@ -1,0 +1,13 @@
+// CALLBACKS
+// Criar uma função que faça operações matemáticas entre 2 valores (soma e multiplicação)
+// função deve receber por parâmetro: operação desejada, valor1 e valor2
+
+function soma(a, b) { return a + b; }
+function multiplicação(a, b) { return a * b; }
+
+function calcula(fnOperacao, valorA, valorB) {
+    return fnOperacao(valorA, valorB);
+}
+
+console.log(calcula(soma, 5, 5));
+console.log(calcula(multiplicação, 5, 5));
