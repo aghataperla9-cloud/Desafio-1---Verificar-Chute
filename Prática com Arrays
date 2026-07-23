@@ -1,0 +1,104 @@
+// 1. Desafios e Práticas
+const listaDeCompras = ['arroz', 'feijão', 'macarrão', 'tomate'];
+console.log("Segndo item da lista:", listaDeCompras[1]);
+listaDeCompras[3] = 'fruta';
+console.log ("Lista após modificação:", listaDeCompras);
+
+// 2. Percorrendo listas com for
+const despesas = [120, 80, 45.5, 200, 60];
+let total = 0; 
+for (let i = 0; i < despesas.length; i++) {
+  total += despesas[i];
+}
+console.log(`Total de despesas: R$ ${total}`);
+
+// 3. Exibindo noms com for... of
+const estudantes = ['Aghata', 'Alinne', 'Yasmim', 'Ana', 'Vitória'];
+for (const nome of estudantes) {
+    console.log ("Estudante:", nome);
+}
+
+// 4. Exibindo mensagens com forEach()
+const mensagens = ['pedido confirmado', 'pagamento aprovado', 'produto enviado'];
+mensagens.forEach(msg=> {
+    console.log("Notificação:", msg);
+});
+ // 5. Adicionando e removendo itens de uma lista
+ const tarefas = ['estudar', 'lavar roupas', 'fazer compras'];
+ tarefas.push('pagar boletos');
+ console.log("Lista após adicionar", tarefas);
+ tarefas.pop();
+ console.log("Lista após remover a última tarefa", tarefas);
+
+ // 6. Clonando um array
+ const pedidos = ['camiseta', 'calça', 'tênis'];
+ const pedidosCopia = pedidos.slice();
+ pedidosCopia.push('boné');
+console.log("Array original", pedidos);
+console.log("Array copiado", pedidosCopia);
+
+// 7. Buscando itens em uma lista
+const livros = ['Dom Casmurro', 'O Cortiço', 'Capitães da Areia', 'Iracema'];
+const livroProcurado = 'O Cortiço';
+if(livros.indexOf(livroProcurado)!==-1) {
+    console.log (`O livro"${livroProcurado}"Está disponível.`);
+} else {
+    console.log (`O livro"${livroProcurado}"Não foi encontrado.`);
+}
+
+// 8. Tranformando dados com map() 
+const precos = [100, 80, 50, 120];
+const precosComDesconto = precos.map(preço => preço * 0.9);
+console.log ("Preços descontados;", precosComDesconto);
+
+// 9. Filtrando Valores 
+const participantes = [
+  { nome: 'Ana', idade: 17 },
+  { nome: 'Bruno', idade: 22 },
+  { nome: 'Carla', idade: 19 },
+  { nome: 'Daniel', idade: 15 },
+  { nome: 'Eduarda', idade: 25 }
+];
+const autorizados = participantes.filter(p => {
+    p.idade > 18? console.log(`Acesso liberado para: ${p.nome}`): false;
+    return p.idade >= 18;
+})
+    const aprovados = autorizados.map(p => p.nome);
+    console.log("Lista de aprovados:", aprovados);
+
+// 10. Painel de controle de produtos
+    const produtos = [
+  { nome: 'Notebook', preco: 2500, quantidadeVendida: 75 },
+  { nome: 'Mouse', preco: 100, quantidadeVendida: 180 },
+  { nome: 'Teclado', preco: 150, quantidadeVendida: 125 },
+  { nome: 'Monitor', preco: 900, quantidadeVendida: 95 }
+];
+console.log("Relatórios de produtos vendidos:");
+
+for (const produto of produtos) {
+    console.log(
+    `${produtos.nome} - Preço: R$${produtos.preco} - Quantidade: $ {Produto.quantidadeVendida}`
+    );
+}
+console.log("\nProdutos que venderam mais de 100 unidades:");
+
+for (const produto of produtos) {
+    if (produto.quantidadeVendida > 100) {
+        console.log(produto.nome);
+    }
+}
+console.log("\nTotal arrecadado por produto:");
+let maiorLucro = 0;
+let produtoMaisLucrativo = "";
+
+for (const produto of produtos) {
+    const total = produto.preco * produto.quantidadeVendida;
+    console.log (`${produto.nome}:R$${total}`);
+    if(total > maiorLucro) {
+        maiorLucro = total;
+        produtoMaisLucrativo = produto.nome;
+    }
+}
+console.log ("\nProduto mais lucrativo");
+console.log (`${produtoMaisLucrativo} - R$${maiorLucro}`);
+
